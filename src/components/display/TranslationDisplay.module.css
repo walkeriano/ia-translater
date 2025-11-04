@@ -1,0 +1,47 @@
+.boxTranslation {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: linear-gradient(
+    to Top,
+    rgba(0, 0, 255, 0.127),
+    rgba(0, 0, 255, 0)
+  );
+}
+
+.boxIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #0091ff;
+  font-size: 1.5rem;
+}
+
+.boxIntro p {
+  font-size: 1.1rem;
+  color: #0091ff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.boxIntro .icon{
+    font-size: 2rem;
+}
+
+.showLetter {
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0091ff79;
+  background-color: #0091ff1d;
+}
