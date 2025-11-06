@@ -1,7 +1,34 @@
 .titleGenerator{
-  background-color: red;
   color: #0091ff;
   position: absolute;
   top: 50px;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.titleGenerator h2{
+    text-transform: uppercase;
+    font-size: 4.5vw;
+    letter-spacing: 2px;
+}
+
+.containerFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.containerFlex p{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.containerFlex .icon{
+    font-size: 0.8rem;
 }
