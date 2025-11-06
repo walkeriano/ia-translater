@@ -1,15 +1,15 @@
 import styles from "./TitleGenerator.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faHexagonNodes } from "@fortawesome/free-solid-svg-icons";
 
 export default function TitleGenerator() {
   return (
     <section className={styles.titleGenerator}>
-      <h2>traductor de señas con I.A</h2>
+      <h2>traductor de lenguaje señas</h2>
       <div className={styles.containerFlex}>
-        <p>inicia ahora</p>
+        <p>Inteligencia Artificial</p>
         <FontAwesomeIcon
-          icon={faChevronDown}
+          icon={faHexagonNodes}
           size="1x"
           className={styles.icon}
         />

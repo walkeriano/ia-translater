@@ -182,7 +182,7 @@ export default function HandProcessor({ videoRef, onLetter }) {
 
   return (
     <section className={styles.containerCam}>
-      {/* <canvas ref={canvasRef} width={100%} height={100%} /> */}
+      <canvas ref={canvasRef} />
     </section>
   );
 }

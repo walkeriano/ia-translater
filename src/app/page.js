@@ -5,6 +5,7 @@ import CameraFeed from "@/components/camera/CameraFeed";
 import HandProcessor from "@/components/camera/HandProcessor";
 import TranslationDisplay from "@/components/display/TranslationDisplay";
 import TitleGenerator from "@/components/titleGenerator/TitleGenerator";
+import Image from "next/image";
 
 export default function Page() {
   const videoRef = useRef(null);
@@ -16,6 +17,9 @@ export default function Page() {
       <CameraFeed ref={videoRef} />
       <HandProcessor videoRef={videoRef} onLetter={setLetter} />
       <TranslationDisplay letter={letter} />
+      <section className={styles.containerImg}>
+        <Image src="/bg-tech.jpg" alt="bg-application" fill={true} />
+      </section>
     </section>
   );
 }

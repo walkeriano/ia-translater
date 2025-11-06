@@ -1,4 +1,4 @@
-.titleGenerator{
+.titleGenerator {
   color: #0091ff;
   position: absolute;
   top: 50px;
@@ -10,25 +10,30 @@
   gap: 5px;
 }
 
-.titleGenerator h2{
-    text-transform: uppercase;
-    font-size: 4.5vw;
-    letter-spacing: 2px;
+.titleGenerator h2 {
+  text-transform: uppercase;
+  font-size: 5.5vw;
+  letter-spacing: 2px;
+  font-family: var(--font-iceberg-sans);
+  font-weight: 400;
 }
 
-.containerFlex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+.containerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #0091ff89;
+  padding: 5px 10px;
+  border-radius: 50px;
 }
 
-.containerFlex p{
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.containerFlex p {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.containerFlex .icon{
-    font-size: 0.8rem;
+.containerFlex .icon {
+  font-size: 0.8rem;
 }

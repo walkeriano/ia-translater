@@ -6,4 +6,13 @@
     padding: 5px;
     border-radius: 25px;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerCam canvas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
