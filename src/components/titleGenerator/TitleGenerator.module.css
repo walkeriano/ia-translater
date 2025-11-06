@@ -1,0 +1,7 @@
+.titleGenerator{
+  background-color: red;
+  color: #0091ff;
+  position: absolute;
+  top: 50px;
+  z-index: 1000;
+}

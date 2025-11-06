@@ -1,5 +1,5 @@
 "use client";
-
+import styles from "./HandProcessor.module.css";
 import { useEffect, useRef } from "react";
 import { FilesetResolver, HandLandmarker } from "@mediapipe/tasks-vision";
 import { checkStability } from "@/components/utils/frameBuffer";
@@ -65,9 +65,9 @@ export default function HandProcessor({ videoRef, onLetter }) {
 
           // Conectar cada dedo
           const fingers = [
-            [1, 2, 3, 4],     // pulgar
-            [5, 6, 7, 8],     // índice
-            [9, 10, 11, 12],  // medio
+            [1, 2, 3, 4], // pulgar
+            [5, 6, 7, 8], // índice
+            [9, 10, 11, 12], // medio
             [13, 14, 15, 16], // anular
             [17, 18, 19, 20], // meñique
           ];
@@ -89,7 +89,10 @@ export default function HandProcessor({ videoRef, onLetter }) {
           }
 
           try {
-            const results = await handLandmarker.detectForVideo(videoEl, Date.now());
+            const results = await handLandmarker.detectForVideo(
+              videoEl,
+              Date.now()
+            );
 
             // Fondo ligero para trail de movimiento
             ctx.fillStyle = "rgba(0,0,0,0.1)";
@@ -101,7 +104,8 @@ export default function HandProcessor({ videoRef, onLetter }) {
               const landmarks = results.landmarks[0];
               frameBufferRef.current.push(landmarks);
 
-              if (frameBufferRef.current.length > 6) frameBufferRef.current.shift();
+              if (frameBufferRef.current.length > 6)
+                frameBufferRef.current.shift();
 
               // Verificar estabilidad
               if (checkStability(frameBufferRef.current)) {
@@ -129,7 +133,13 @@ export default function HandProcessor({ videoRef, onLetter }) {
               // Dibujar nodos
               for (const point of landmarks) {
                 ctx.beginPath();
-                ctx.arc(point.x * canvas.width, point.y * canvas.height, 4, 4, 1 * Math.PI);
+                ctx.arc(
+                  point.x * canvas.width,
+                  point.y * canvas.height,
+                  4,
+                  4,
+                  1 * Math.PI
+                );
                 ctx.fillStyle = "#0091ffff";
                 ctx.shadowColor = "#0040c0ff";
                 ctx.shadowBlur = 10;
@@ -165,8 +175,14 @@ export default function HandProcessor({ videoRef, onLetter }) {
       return () => video.removeEventListener("loadeddata", handleLoaded);
     }
 
-    return () => { running = false; };
+    return () => {
+      running = false;
+    };
   }, [videoRef, onLetter]);
 
-  return <canvas ref={canvasRef} width={640} height={480} />;
+  return (
+    <section className={styles.containerCam}>
+      {/* <canvas ref={canvasRef} width={100%} height={100%} /> */}
+    </section>
+  );
 }

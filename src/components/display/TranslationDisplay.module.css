@@ -20,8 +20,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: #0091ff;
-  font-size: 1.5rem;
+    color: #0091ff;
 }
 
 .boxIntro p {
@@ -44,4 +43,10 @@
   justify-content: center;
   border: 1px solid #0091ff79;
   background-color: #0091ff1d;
+}
+
+.showLetter p{
+  color: #0091ff;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
 }

@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import CameraFeed from "@/components/camera/CameraFeed";
 import HandProcessor from "@/components/camera/HandProcessor";
 import TranslationDisplay from "@/components/display/TranslationDisplay";
+import TitleGenerator from "@/components/titleGenerator/TitleGenerator";
 
 export default function Page() {
   const videoRef = useRef(null);
@@ -11,6 +12,7 @@ export default function Page() {
 
   return (
     <section className={styles.pagestyles}>
+      <TitleGenerator/>
       <CameraFeed ref={videoRef} />
       <HandProcessor videoRef={videoRef} onLetter={setLetter} />
       <TranslationDisplay letter={letter} />
